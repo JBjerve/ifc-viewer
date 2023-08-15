@@ -33,8 +33,18 @@ fileInput.addEventListener('change', (e) => {
     handleFiles(files);
 });
 
-// Function to handle the files
 function handleFiles(files) {
-    // Add your file handling logic here
-    console.log(files);
+    if (files.length > 0) {
+        const selectedFile = files[0];
+        const extension = selectedFile.name.split('.').pop().toLowerCase();
+
+        if (extension === 'ifc') {
+            // Open a new page or do further processing
+            window.location.href = './viewer.html'; // Change the URL to the new page
+
+        } else {
+            // Display an error message
+            alert('Please choose an IFC file.');
+        }
+    }
 }
