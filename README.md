@@ -1,6 +1,6 @@
 # IFC File Viewer - Norconsult
 
-Welcome to the IFC File Viewer. This web application allows you to view IFC (Industry Foundation Classes) files directly from your browser without the need to create an account or have your data collected. The primary purpose of this website is to provide Norconsult employees with a convenient way to access and visualize IFC files without the hassle of downloading software or using external services that might compromise data privacy.
+This web application allows you to view IFC (Industry Foundation Classes) files directly from your browser without the need to create an account or have your data collected. The primary purpose of this website is to provide Norconsult employees with a convenient way to access and visualize IFC files without the hassle of downloading software or using external services that might compromise data privacy.
 
 ## Features
 

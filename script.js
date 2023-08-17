@@ -40,7 +40,7 @@ function handleFiles(files) {
 
         if (extension === 'ifc') {
             // Open a new page or do further processing
-            window.location.href = './viewer.html'; // Change the URL to the new page
+            window.location.href = './src/viewer.html'; // Change the URL to the new page
 
         } else {
             // Display an error message
