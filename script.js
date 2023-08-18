@@ -1,7 +1,12 @@
-// script.js
+// Variables
 const dragDropArea = document.getElementById('dragDropArea');
 const fileInput = document.getElementById('fileInput');
 const openFileExplorer = document.getElementById('openFileExplorer');
+const viewerContainer = document.getElementById('viewer-container');
+const fileBox = document.getElementById('fileBox');
+const banner = document.getElementById('banner');
+const pad = document.getElementById('pad');
+
 
 // Drag and drop event handlers
 dragDropArea.addEventListener('dragover', (e) => {
@@ -33,18 +38,12 @@ fileInput.addEventListener('change', (e) => {
     handleFiles(files);
 });
 
-function handleFiles(files) {
+fileInput.addEventListener('change', (e) => {
+    const files = e.target.files;
     if (files.length > 0) {
-        const selectedFile = files[0];
-        const extension = selectedFile.name.split('.').pop().toLowerCase();
-
-        if (extension === 'ifc') {
-            // Open a new page or do further processing
-            window.location.href = './src/viewer.html'; // Change the URL to the new page
-
-        } else {
-            // Display an error message
-            alert('Please choose an IFC file.');
-        }
+        viewerContainer.style.display = 'block';
+        fileBox.style.display = 'none';
+        banner.style.display = 'none';
+        pad.style.display = 'none';
     }
-}
+})

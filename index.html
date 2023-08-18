@@ -5,7 +5,7 @@
     <title>IFC-viewer</title>
 </head>
 <body>
-    <div class="banner">
+    <div class="banner" id="banner">
         <div class="banner-content">
             <div class="title">
                 IFC-viewer
@@ -24,7 +24,11 @@
         <button id="openFileExplorer">Open File Explorer</button>
     </div>
     
-    <div class="pad"></div>
+    <div class="pad" id="pad"></div>
+
+    <!-- <input type="file" name="load" id="file-input" /> -->
+    <div id="viewer-container"></div>
+    <script src="./bundle.js"></script>
     
     <script src="script.js"></script>
 </body>
