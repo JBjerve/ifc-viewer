@@ -9,11 +9,13 @@
     overflow: hidden;
   }
   
-  #three-canvas {
+  #viewer-container {
     position: fixed;
     top: 0;
     left: 0;
     outline: none;
+    height: 100vh;
+    width: 100vh;
   }
   
   #file-input {
