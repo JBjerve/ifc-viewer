@@ -2,15 +2,15 @@ import { Color } from "three";
 import { IfcViewerAPI } from "web-ifc-viewer";
 
 const container = document.getElementById("viewer-container");
+const input = document.getElementById("fileInput");
 
 const viewer = new IfcViewerAPI({
   container,
   backgroundColor: new Color(0xffffff),
 });
+
 viewer.axes.setAxes();
 viewer.grid.setGrid();
-
-const input = document.getElementById("file-input");
 
 window.ondblclick = () => viewer.IFC.selector.pickIfcItem(true);
 window.onmousemove = () => viewer.IFC.selector.prePickIfcItem();
@@ -30,7 +30,10 @@ input.addEventListener(
     async (changed) => {
       const file = changed.target.files[0];
       const ifcURL = URL.createObjectURL(file);
-      viewer.IFC.loadIfcUrl(ifcURL);
+
+
+
+      viewer.IFC.loadIfcUrl(ifcURL);  
     },
   
     false
