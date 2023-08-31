@@ -1,4 +1,4 @@
-// Variables
+// Get references to HTML elements
 const dragDropArea = document.getElementById('dragDropArea');
 const openFileExplorer = document.getElementById('openFileExplorer');
 const viewerContainer = document.getElementById('viewer-container');
@@ -8,6 +8,7 @@ const banner = document.getElementById('banner');
 const pad = document.getElementById('pad');
 let fileInput = document.getElementById('fileInput');
 
+// Add event listeners for drag and drop functionality
 dragDropArea.addEventListener('dragover', (e) => {
     e.preventDefault();
     dragDropArea.classList.add('highlight');
@@ -28,15 +29,18 @@ dragDropArea.addEventListener('drop', (e) => {
     fileInput.dispatchEvent(changeEvent);
 });
 
+// Open file explorer when the "Open File Explorer" button is clicked
 openFileExplorer.addEventListener('click', () => {
     fileInput.click();
 });
 
+// Handle the change event of the file input
 fileInput.addEventListener('change', (e) => {
     const files = e.target.files;
 
 });
 
+// Hiding the containers when a file is loaded
 fileInput.addEventListener('change', (e) => {
     const files = e.target.files;
     if (files.length > 0) {

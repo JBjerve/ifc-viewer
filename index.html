@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Link to css file that contains that styles for the page -->
     <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Setting the title of the webpage -->
     <title>IFC-viewer</title>
 </head>
 <body>
+
     <div class="banner" id="banner">
         <div class="banner-content">
             <div class="title">
+                <!-- Setting the title in the banner -->
                 IFC-viewer
             </div>
             <div class="logo">
+                <!-- Inserting the logo in the banner -->
                 <img src="./img/logo_white.svg" alt="Logo">
             </div>
         </div>
     </div>
    
+    <!-- Drag drop box and file selection -->
     <div class="file-box" id="fileBox">
         <div class="drag-drop-area" id="dragDropArea">
             <p>Drag and drop files here</p>
@@ -24,12 +31,15 @@
         <button id="openFileExplorer">Open File Explorer</button>
     </div>
     
+    <!-- Empty padding container that places file box correctly -->
     <div class="pad" id="pad"></div>
 
-    <!-- <input type="file" name="load" id="file-input" /> -->
+    <!-- Container that is filled with the IFC-viewer when a file is inserted -->
     <div id="viewer-container"></div>
+    <!-- Code for the IFC-viewer -->
     <script src="./bundle.js"></script>
     
+    <!-- Linking Javascript code that triggers the IFC-viewer and also hides the rest of the page -->
     <script src="script.js"></script>
 </body>
 </html>
