@@ -40,7 +40,7 @@ input.addEventListener(
       };
 
       // Load the IFC file that is provided by the user
-      viewer.IFC.loadIfcUrl(ifcURL); 
+      viewer.IFC.loadIfcUrl(ifcURL, true); 
     },
   
     false
